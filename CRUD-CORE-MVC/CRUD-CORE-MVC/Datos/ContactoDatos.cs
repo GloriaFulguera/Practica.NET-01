@@ -68,5 +68,101 @@ namespace CRUD_CORE_MVC.Datos
             }
             return oContacto;
         }
+
+        public bool Guardar(ContactoModel oContacto)
+        {
+            bool rta;
+
+            try
+            {
+                //instancia de Clase conexion para poder utilizar el metodo que obtiene la conexion
+                var cn = new Conexion();
+
+                //Conexion a BD
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    //Ejecuto el procedure de la Base de Datos
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Guardar", conexion);
+                    cmd.Parameters.AddWithValue("Nombre", oContacto.Nombre);
+                    cmd.Parameters.AddWithValue("Telefono", oContacto.Telefono);
+                    cmd.Parameters.AddWithValue("Email", oContacto.Email);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                rta = false;
+            }
+            
+            return rta;
+        }
+
+        public bool Editar(ContactoModel oContacto)
+        {
+            bool rta;
+
+            try
+            {
+                //instancia de Clase conexion para poder utilizar el metodo que obtiene la conexion
+                var cn = new Conexion();
+
+                //Conexion a BD
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    //Ejecuto el procedure de la Base de Datos
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Editar", conexion);
+                    cmd.Parameters.AddWithValue("idContacto", oContacto.idContacto);
+                    cmd.Parameters.AddWithValue("Nombre", oContacto.Nombre);
+                    cmd.Parameters.AddWithValue("Telefono", oContacto.Telefono);
+                    cmd.Parameters.AddWithValue("Email", oContacto.Email);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                rta = false;
+            }
+
+            return rta;
+        }
+
+        public bool Eliminar(int idContacto)
+        {
+            bool rta;
+
+            try
+            {
+                //instancia de Clase conexion para poder utilizar el metodo que obtiene la conexion
+                var cn = new Conexion();
+
+                //Conexion a BD
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    //Ejecuto el procedure de la Base de Datos
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);
+                    cmd.Parameters.AddWithValue("idContacto", idContacto);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                rta = false;
+            }
+
+            return rta;
+        }
     }
 }
+ 
