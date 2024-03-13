@@ -12,7 +12,7 @@ build_property.RootNamespace = CRUD_CORE_MVC
 build_property.ProjectDir = C:\Users\glori\source\repos\Practica.NET-01\CRUD-CORE-MVC\CRUD-CORE-MVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\glori\source\repos\Practica.NET-01\CRUD-CORE-MVC\CRUD-CORE-MVC
 build_property._RazorSourceGeneratorDebug = 
 
@@ -22,6 +22,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/glori/source/repos/Practica.NET-01/CRUD-CORE-MVC/CRUD-CORE-MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/glori/source/repos/Practica.NET-01/CRUD-CORE-MVC/CRUD-CORE-MVC/Views/Mantenedor/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/glori/source/repos/Practica.NET-01/CRUD-CORE-MVC/CRUD-CORE-MVC/Views/Mantenedor/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxFbGltaW5hci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/glori/source/repos/Practica.NET-01/CRUD-CORE-MVC/CRUD-CORE-MVC/Views/Mantenedor/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxHdWFyZGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/glori/source/repos/Practica.NET-01/CRUD-CORE-MVC/CRUD-CORE-MVC/Views/Mantenedor/Listar.cshtml]
