@@ -6,7 +6,7 @@
 
 <div class="card">
     <div class="card-header">
-        Lista Contactos
+        <b>LISTA DE CONTACTOS</b>
     </div>
     <div class="card-body">
         <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success"><i class="bi bi-plus-circle"></i> NUEVO CONTACTO</a>
@@ -32,11 +32,11 @@
 
                             <!-- Button trigger modal -->
                             <a class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="@("#EliminarContact-"+item.idContacto)" >
-                                <i class="bi bi-trash"></i>
+                                <i class="bi bi-trash"></i> ELIMINAR
                             </a>
                             @await Html.PartialAsync("~/Views/PartialViews/_EliminarContactoPartial.cshtml",item)
                             @*data-url="@Url.Action($"Eliminar/{item.idContacto}")"*@
-                            <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm" asp-route-idContacto="@item.idContacto"><i class="bi bi-pencil-square"></i></a>
+                            <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm" asp-route-idContacto="@item.idContacto"><i class="bi bi-pencil-square"></i> EDITAR</a>
                         </td>
                     </tr>
                 }
