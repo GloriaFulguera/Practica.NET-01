@@ -52,7 +52,7 @@ namespace CRUD_CORE_MVC.Controllers
         {
             //Mostrar formulario editar
             var oContacto = _ContactoDatos.Obtener(idContacto);
-            return View(oContacto);
+            return PartialView("_EliminarContactoPartial",oContacto);
         }
         [HttpPost]
         public IActionResult Eliminar(ContactoModel oContacto)
@@ -62,7 +62,7 @@ namespace CRUD_CORE_MVC.Controllers
             if (rta)
                 return RedirectToAction("Listar");
             else
-                return View();
+                return PartialView("_EliminarContactoPartial");
         }
     }
 }
